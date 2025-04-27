@@ -90,11 +90,7 @@ Z:\fisher\NotatnikSln\Notatnik\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcorea
 Z:\fisher\NotatnikSln\Notatnik\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ProductSummary.cshtml.g.cs
 z:\fisher\NotatnikSln\Notatnik\bin\Debug\netcoreapp3.1\libman.json
-z:\fisher\NotatnikSln\Notatnik\bin\Debug\netcoreapp3.1\Notatnik.StaticWebAssets.xml
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\Notatnik.csproj.AssemblyReference.cache
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\Notatnik.GeneratedMSBuildEditorConfig.editorconfig
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\Notatnik.StaticWebAssets.Pack.cache
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.Notatnik.Microsoft.AspNetCore.StaticWebAssets.props
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.Notatnik.props
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.Notatnik.props
-z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.Notatnik.props
+Z:\fisher\NotatnikSln\Notatnik\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+Z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\Notatnik.csprojAssemblyReference.cache
+Z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\staticwebassets\Notatnik.StaticWebAssets.xml
+Z:\fisher\NotatnikSln\Notatnik\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs

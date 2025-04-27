@@ -30,7 +30,10 @@ namespace Notatnik
                 opts.UseSqlServer(
                     Configuration["ConnectionStrings:NotatnikConnection"])
                 );
-            services.AddScoped<INotatnikRepository, EFNotatnikRepository>();
+            services.AddScoped<INotatnikRepository, EFNotatnikRepository>(); /*179*/
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,9 +47,16 @@ namespace Notatnik
 
             app.UseEndpoints(endpoints =>
             {
-                           endpoints.MapControllerRoute("pagination",
-                "Products/Page{productPage}",
-                new { Controller = "Home", action = "Index" });
+            endpoints.MapControllerRoute("catpage",
+                    "{category}/Page{productPage:int}",
+                    new { Controller = "Home", action = "Index" });
+                endpoints.MapControllerRoute("page", "Page{productPage:int}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+                endpoints.MapControllerRoute("category", "{category}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+                endpoints.MapControllerRoute("pagination",
+                    "Products/Page{productPage}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
                 endpoints.MapDefaultControllerRoute();
             });
             SeedData.EnsurePopulated(app);
