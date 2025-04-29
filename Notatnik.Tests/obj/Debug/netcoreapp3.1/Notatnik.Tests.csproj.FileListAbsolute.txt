@@ -243,3 +243,4 @@ z:\fisher\NotatnikSln\Notatnik.Tests\bin\Debug\netcoreapp3.1\Notatnik.Tests.dll
 z:\fisher\NotatnikSln\Notatnik.Tests\bin\Debug\netcoreapp3.1\Notatnik.Tests.pdb
 z:\fisher\NotatnikSln\Notatnik.Tests\obj\Debug\netcoreapp3.1\Notatnik.Tests.genruntimeconfig.cache
 z:\fisher\NotatnikSln\Notatnik.Tests\bin\Debug\netcoreapp3.1\libman.json
+z:\fisher\NotatnikSln\Notatnik.Tests\bin\Debug\netcoreapp3.1\Notatnik.StaticWebAssets.xml
