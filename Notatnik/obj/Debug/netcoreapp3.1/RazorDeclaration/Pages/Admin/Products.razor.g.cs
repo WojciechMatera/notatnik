@@ -55,13 +55,42 @@ using Notatnik.Models;
 #nullable disable
     [global::Microsoft.AspNetCore.Components.RouteAttribute("/admin/products")]
     [global::Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
-    public partial class Products : global::Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Products : OwningComponentBase<INotatnikRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(global::Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 52 "z:\fisher\NotatnikSln\Notatnik\Pages\Admin\Products.razor"
+       
+    public INotatnikRepository Repository => Service;
+
+    public IEnumerable<Product> ProductData { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+
+    public async Task UpdateData()
+    {
+        ProductData = await Repository.Products.ToListAsync();
+    }
+
+    public async Task DeleteProduct(Product p)
+    {
+        Repository.DeleteProduct(p);
+        await UpdateData();
+    }
+
+    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
+    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

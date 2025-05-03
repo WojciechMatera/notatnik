@@ -1,10 +1,14 @@
-<Router AppAssembly="typeof(Startup).Assembly">
-<Found>
-    <RouteView RouteData="@context" DefaultLayout="typeof(AdminLayout)" />
-</Found>
-<NotFound>
-    <h4 class="bg-danger text-white text-center p-2">
-        Nie znaleziono dopasowanej trasy
-    </h4>
-</NotFound>
+
+
+<Router AppAssembly=@typeof(Notatnik.Startup).Assembly>
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(AdminLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(AdminLayout)">
+            <h4 class="bg-danger text-white text-center p-2">
+                Nie znaleziono dopasowanej trasy
+            </h4>
+        </LayoutView>
+    </NotFound>
 </Router>

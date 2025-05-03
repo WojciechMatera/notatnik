@@ -1,4 +1,6 @@
 @page "/admin"
+
+
 @{ Layout = null; }
 
 <!DOCTYPE html>
@@ -9,7 +11,8 @@
     <base href="/" />
 </head>
 <body>
-    <component type="typeof(Routed)" render-mode="Server" />
+    
+    <component type="@typeof(Notatnik.Pages.Admin.Routed)" render-mode="ServerPrerendered" />
     <script src="/_framework/blazor.server.js"></script>
 </body>
 </html>

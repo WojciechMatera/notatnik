@@ -20,8 +20,8 @@ namespace Notatnik
                 Configuration = config;
         }    
 
-        private IConfiguration Configuration { get; set;}      // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        private IConfiguration Configuration { get; set;}    
+        
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddControllersWithViews();
@@ -32,6 +32,7 @@ namespace Notatnik
                 );
             services.AddScoped<INotatnikRepository, EFNotatnikRepository>(); /*179*/
             services.AddRazorPages();
+    
             services.AddServerSideBlazor();
             
         }
@@ -44,7 +45,7 @@ namespace Notatnik
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            
             app.UseEndpoints(endpoints =>
             {
             endpoints.MapControllerRoute("catpage",
@@ -60,9 +61,11 @@ namespace Notatnik
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
-                endpoints.MapFallbackToPage("/admin/{*catchall}","/Admin/Index");
+                endpoints.MapFallbackToPage("/admin/{*catchall}","/Admin/_Host");
             });
             SeedData.EnsurePopulated(app);
+
+          
         }
     }
 }
